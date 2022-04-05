@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class proplem_4_22 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("enter First String : ");
+        String string1 = input.next();
+        System.out.print("enter Second String : ");
+        String string2 = input.next();
+        boolean a = string1.contains(string2);
+        int i = 0;
+        if (a==true) {
+            System.out.print(string2 + " is contained in " + string1);
+
+        }
+        else {
+            System.out.println("no match detected deep scan on .");
+            while (i<string2.length()) {
+                String lister = string2.charAt(i)+"";
+                boolean cc = string1.contains(lister);
+                if (cc==false) {
+                    System.out.println(lister + " isn't contained in the First word.");
+                }
+                else{
+                    System.out.println(lister + " is contained in First word.");
+                }
+                i++;
+               }
+               
+               
+        }
+
+    }
+}
